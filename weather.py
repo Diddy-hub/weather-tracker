@@ -53,6 +53,9 @@ def get_forecast(lat, lon):
     return response.json()
 
 def generate_dashboard(df):
+    df = df.copy()
+    df["datetime"] = pd.to_datetime(df["time"])  # ← just added
+
     max_idx = df["temp_f"].idxmax()
     min_idx = df["temp_f"].idxmin()
 
