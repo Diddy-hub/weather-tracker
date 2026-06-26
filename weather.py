@@ -1,8 +1,6 @@
 import requests
 import pandas as pd
-import matplotlib
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
+import plotly
 from datetime import date
 import os
 os.environ['MPLBACKEND'] = 'Agg'
